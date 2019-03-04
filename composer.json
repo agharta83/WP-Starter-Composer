@@ -1,0 +1,35 @@
+{
+    "name": "misst/wp-starter-composer",
+    "description": "Starter WordPress avec Composer",
+    "authors": [
+        {
+            "name": "agharta83",
+            "email": "35310694+agharta83@users.noreply.github.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "johnpbloch/wordpress": "^5.1",
+        "wpackagist-theme/twentyseventeen":"2.0",
+        "wpackagist-plugin/akismet": "4.1.1",
+        "wpackagist-plugin/contact-form-7":"5.1.1"
+    },
+    "require-dev": {
+        "wpackagist-plugin/wordpress-importer": "0.6.4",
+        "wpackagist-plugin/what-the-file": "1.5.4",
+        "wpackagist-plugin/simply-show-hooks": "1.2.1"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}
